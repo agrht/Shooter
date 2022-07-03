@@ -8,7 +8,6 @@ namespace Script
         public float lifetime;
         public float distance;
         public int damage;
-        public int score;
 
         private void Update()
         {

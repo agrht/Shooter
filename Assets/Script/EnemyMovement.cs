@@ -1,12 +1,10 @@
 using UnityEngine;
-using TMPro;
 
 namespace Script
 {
 public class EnemyMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    
     public int damage;
     public int health = 1;
     
@@ -15,17 +13,22 @@ public class EnemyMovement : MonoBehaviour
 
     private Vector2 movement;
     private Vector2 mousePos;
-
+    
     void Start()
     {
-        player = GameObject.FindWithTag("Player");    
+        player = GameObject.FindWithTag("Player");
     }
     private void Update()
-    {
+    { 
         var position = player.transform.position;
         mousePos = position;
         movement.x = position.x;
         movement.y = position.y;
+        if (health == 0)
+        {
+            PlayerMovement.enemyCounter ++;
+            Destroy(gameObject);
+        }
     }
     private void FixedUpdate()
     {
@@ -50,8 +53,6 @@ public class EnemyMovement : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         health -= damage;
-        if(health<=0)
-            Destroy(gameObject);
     }
 }
 }

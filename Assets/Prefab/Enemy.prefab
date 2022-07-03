@@ -118,7 +118,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0013726371, y: -0.014953238}
@@ -138,8 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   damage: 1
-  score: 0
   health: 1
   rb: {fileID: 6868506597794707761}
   player: {fileID: 6224528110623089320, guid: bf84a394f2eef7d4c9d0ebc5f9f8cbc9, type: 3}
-  Text: {fileID: 6501181014775505764, guid: 2acfce106e483474e83747c4f449ece7, type: 3}
