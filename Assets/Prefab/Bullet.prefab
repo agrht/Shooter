@@ -99,9 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  lifetime: 3
+  lifetime: 5
   distance: 10
   damage: 1
+  parent: {fileID: 3471212832688760863, guid: bf8267fe354a67b4d8ef0aa850e4fd22, type: 3}
 --- !u!70 &-4527354489137989641
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Script
@@ -9,6 +10,10 @@ namespace Script
         public float distance;
         public int damage;
 
+        private void Start()
+        {
+            Destroy(gameObject, lifetime);
+        }
         private void Update()
         {
             RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance);
@@ -20,7 +25,7 @@ namespace Script
             //Destroy(gameObject);
             transform.Translate(Vector2.up * speed* Time.deltaTime);
         }
-        
+
         private void OnTriggerEnter2D(Collider2D colision)
         {
             if (colision.CompareTag("Enemy"))

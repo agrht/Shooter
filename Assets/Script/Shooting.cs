@@ -15,8 +15,10 @@ namespace Script
             {
                 if (Input.GetMouseButton(0))
                 {
-                    Instantiate(bullet, shotPoint.position, transform.rotation);
-                    timeBtwShoots = startTimeBtwShoots;
+                    GameObject child = Instantiate(bullet, shotPoint.position, transform.rotation);
+                    child.transform.parent = transform;
+                    //Instantiate(bullet, shotPoint.position, transform.rotation);
+                   timeBtwShoots = startTimeBtwShoots;
                 }
             }
             else
